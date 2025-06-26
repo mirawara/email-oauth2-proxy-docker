@@ -1,0 +1,11 @@
+services:
+  email-oauth2-proxy:
+    image: email-oauth2-proxy
+    build: .
+    container_name: email-oauth2-proxy
+    hostname: email-oauth2-proxy
+    # command: --debug
+    volumes:
+      - ./emailproxy.config:/emailproxy.config
+    ports:
+      - 2525:1587
